@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 // desc     Auth user & get token
 // access   Public
 router.post('/', (req, res) => {
-    res.send('RLog in user');
+    res.send('Log in user');
 });
 
-module.export = router;
+module.exports = router;

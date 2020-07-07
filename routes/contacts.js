@@ -29,4 +29,4 @@ router.delete('/:id', (req, res) => {
     res.send('Delete contact');
 });
 
-module.export = router;
+module.exports = router;
