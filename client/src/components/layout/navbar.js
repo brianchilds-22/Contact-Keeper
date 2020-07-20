@@ -27,12 +27,12 @@ const Navbar = ({ title, icon }) => {
     const guestLinks = (
         <Fragment>
            <li>
-                    <Link to='/register'>Register</Link>
-                </li>
+            <Link to='/register'>Register</Link>
+            </li>
 
-                <li>
-                    <Link to='/login'>Login</Link>
-                </li>
+            <li>
+            <Link to='/login'>Login</Link>
+            </li>
         </Fragment>
     );
     
@@ -43,15 +43,7 @@ const Navbar = ({ title, icon }) => {
                 <i className={icon} /> {title}
             </h1>
             <ul>
-                {/* <li>
-                    <Link to='/'>Home</Link>
-                </li>
-
-                <li>
-                    <Link to='/about'>About</Link>
-                </li> */}
-
-               {isAuthenticated ? authLinks : guestLinks }
+                {isAuthenticated ? authLinks : guestLinks }
             </ul>
             
         </div>

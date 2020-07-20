@@ -20,10 +20,10 @@ const Register = (props) => {
             setAlert(error, 'danger');
             clearErrors();
         }
-        // exlint-diable-next-line
+        // eslint-diable-next-line
     }, [error, isAuthenticated, props.history]);
 
-    const [ user, setUser] = useState({
+    const [user, setUser] = useState({
         name: '',
         email: '',
         password: '',
@@ -32,7 +32,7 @@ const Register = (props) => {
     
     const { name, email, password, password2 } = user;
 
-    const onChange = e => setUser({ ...user, [e.target.name] : e.target.value });
+    const onChange = e => setUser({ ...user, [e.target.name]: e.target.value });
 
     const onSubmit = e => {
         e.preventDefault();
@@ -72,7 +72,7 @@ const Register = (props) => {
 
                 <div className="form-group">
                     <label htmlFor="password2">Confirm Password</label>
-                    <input type="password" name="password2" value={password2} onChange={onChange} required/>
+                    <input type="password" name="password2" value={password2} onChange={onChange} required minLength='6'/>
                 </div>
                 <input type="submit" value="Register"  className="btn btn-primary btn-block"/>
             </form>

@@ -32,7 +32,7 @@ const AuthState = props => {
        }
 
         try {
-            const res = axios.get('api/auth');
+            const res = await axios.get('api/auth');
 
             dispatch({ type: USER_LOADED,
             payload: res.data 
@@ -45,7 +45,7 @@ const AuthState = props => {
     const register = async formData => {
         const config = {
             headers: {
-                'Content-Type': 'applicaton/json'
+                'Content-Type': 'application/json'
             }
         }
 
@@ -69,7 +69,7 @@ const AuthState = props => {
     const login = async formData => {
         const config = {
             headers: {
-                'Content-Type': 'applicaton/json'
+                'Content-Type': 'application/json'
             }
         };
 
